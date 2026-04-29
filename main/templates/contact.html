@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Contact Me</h1>
+
+<div class="card p-4 mt-3" style="max-width: 500px;">
+    <form>
+        <div class="mb-3">
+            <label>Name</label>
+            <input type="text" class="form-control" placeholder="Your Name">
+        </div>
+
+        <div class="mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control" placeholder="Your Email">
+        </div>
+
+        <div class="mb-3">
+            <label>Message</label>
+            <textarea class="form-control" rows="4"></textarea>
+        </div>
+
+        <button class="btn btn-primary">Send</button>
+    </form>
+</div>
+
+<div class="mt-4">
+    <p><strong>Email:</strong> sudeepap102@gmail.com</p>
+    <p><strong>GitHub:</strong>https://github.com/SudeepN27</p>
+</div>
+{% endblock %}
