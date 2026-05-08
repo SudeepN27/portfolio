@@ -1,0 +1,339 @@
+{% extends 'base.html' %}
+
+
+# Professional Django Portfolio UI Upgrade
+
+## 1. Update `base.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudeep Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .hero-section {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(to right, #0f172a, #1e293b);
+            color: white;
+            padding: 50px 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .skill-badge {
+            background: #0f172a;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 30px;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/">Sudeep</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about/">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/projects/">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact/">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+{% block content %}
+{% endblock %}
+
+<footer>
+    <p>© 2026 Sudeep Portfolio | Built with Django & DevOps</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+```
+
+---
+
+# 2. Update `home.html`
+
+```html
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="hero-section">
+    <div>
+        <h1>Hi, I'm Sudeep</h1>
+
+        <h3 class="mt-3">Full Stack Developer | Django | DevOps</h3>
+
+        <p>
+            I build scalable web applications using Python Django,
+            REST APIs, Docker, and Cloud technologies.
+        </p>
+
+        <div class="mt-4">
+            <a href="/projects/" class="btn btn-light btn-lg me-2">View Projects</a>
+            <a href="/contact/" class="btn btn-outline-light btn-lg">Contact Me</a>
+        </div>
+    </div>
+</section>
+
+<div class="container mt-5">
+
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="text-center">
+        <span class="skill-badge">Python</span>
+        <span class="skill-badge">Django</span>
+        <span class="skill-badge">Docker</span>
+        <span class="skill-badge">Git & GitHub</span>
+        <span class="skill-badge">AWS</span>
+        <span class="skill-badge">REST APIs</span>
+        <span class="skill-badge">Bootstrap</span>
+        <span class="skill-badge">SQL</span>
+        <span class="skill-badge">CI/CD</span>
+    </div>
+
+</div>
+
+{% endblock %}
+```
+
+---
+
+# 3. Update `about.html`
+
+```html
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <h1 class="section-title">About Me</h1>
+
+    <div class="card p-5 shadow-sm">
+
+        <p>
+            I am an MCA graduate specialized in Cloud Computing with hands-on experience in Python,
+            Django, REST APIs, Docker, GitHub Actions, and cloud deployment.
+        </p>
+
+        <p>
+            I completed internships at Ecoders as a Full Stack Developer and at QSpiders in Software Testing.
+            I enjoy building scalable web applications and learning DevOps practices.
+        </p>
+
+        <h3 class="mt-4">Education</h3>
+
+        <ul>
+            <li><strong>MCA - Cloud Computing</strong> | Surana College | 2023 - 2025</li>
+            <li><strong>BCA</strong> | Surana College | 2020 - 2023</li>
+        </ul>
+
+        <h3 class="mt-4">Achievements</h3>
+
+        <ul>
+            <li>🏆 1st Prize - Dayananda College Intercollege Web Design Fest</li>
+            <li>🏆 1st Prize - CIMS Technical Treasure Hunt</li>
+            <li>🏆 Overall Trophy Winner</li>
+            <li>📄 Research Paper Presented at National Level Conference</li>
+        </ul>
+
+    </div>
+
+</div>
+
+{% endblock %}
+```
+
+---
+
+# 4. Update `projects.html`
+
+```html
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <h1 class="section-title">My Projects</h1>
+
+    <div class="row">
+
+        {% for project in pro %}
+
+        <div class="col-md-6 mb-4">
+
+            <div class="card shadow-sm h-100 p-3">
+
+                <div class="card-body">
+
+                    <h3>{{ project.title }}</h3>
+
+                    <p class="mt-3">
+                        {{ project.description }}
+                    </p>
+
+                    <p>
+                        <strong>Tech Stack:</strong>
+                        {{ project.tech_stack }}
+                    </p>
+
+                    <a href="{{ project.github_link }}" target="_blank" class="btn btn-dark">
+                        View Project
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}
+```
+
+---
+
+# 5. Update `contact.html`
+
+```html
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <h1 class="section-title">Contact Me</h1>
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <div class="card p-5 shadow-sm">
+
+                <h4>Email</h4>
+                <p>yourmail@gmail.com</p>
+
+                <h4>GitHub</h4>
+                <p>
+                    <a href="https://github.com/yourusername" target="_blank">
+                        github.com/yourusername
+                    </a>
+                </p>
+
+                <h4>LinkedIn</h4>
+                <p>
+                    <a href="#" target="_blank">
+                        Add LinkedIn URL
+                    </a>
+                </p>
+
+                <hr>
+
+                
+
+
+{% block content %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<div class="container text-center mt-5">
+
+    <h1 class="display-4 fw-bold">Hi, I'm Sudeep</h1>
+
+    <p class="lead mt-3">
+        Full Stack Developer | Django | DevOps
+    </p>
+
+    <p>
+        I build scalable web applications using Python (Django) 
+        and deploy them using Docker & Cloud platforms.
+    </p>
+
+    <div class="mt-4">
+        <a href="/projects/" class="btn btn-dark me-2">View Projects</a>
+        <a href="/contact/" class="btn btn-outline-dark">Contact Me</a>
+    </div>
+
+</div>
+
+{% endblock %}

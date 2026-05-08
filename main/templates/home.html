@@ -1,49 +1,216 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<div class="text-center mt-5">
-    <h1 class="display-4">Hi, I'm Sudeep 👋</h1>
-    <p class="lead">DevOps Engineer | Backend Devloper | Django | Docker | AWS | CI/CD</p>
-<p>DevOps-focused Full-Stack Developer with hands-on experience in building and deploying web applications using Python (Django), RESTful APIs, and modern web technologies. Skilled in Docker, CI/CD, Linux, and cloud deployment fundamentals, with practical experience containerizing and deploying applications. MCA graduate with Cloud Computing specialization, along with internship experience in full-stack development and software testing. Passionate about building scalable systems, automation, and cloud-native applications.
-</p>
-    <div class="mt-4">
-        <a class="btn btn-primary btn-lg m-2" href="/projects/">View Projects</a>
-       <a class="btn btn-dark btn-lg m-2" href="/about/">About</a>
-        <a class="btn btn-dark btn-lg m-2" href="/contacts/">Contact Me</a>
+
+<!-- HERO SECTION -->
+
+<section class="hero-section">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-7">
+
+                <h1 class="display-3 fw-bold">
+                    Hi, I'm Sudeep
+                </h1>
+
+                <h3 class="mt-3 text-light">
+                    Full Stack Developer | Django | DevOps Enthusiast
+                </h3>
+
+                <p class="mt-4 fs-5">
+                    MCA graduate specialized in Cloud Computing with hands-on
+                    experience in Python Django, REST APIs, Docker,
+                    CI/CD, GitHub Actions, and cloud deployment.
+                </p>
+
+                <div class="mt-4">
+
+                    <a href="/projects/" class="btn btn-light btn-lg me-3">
+                        View Projects
+                    </a>
+
+                    <a href="{% static 'resume/Sudeep_N_Resume_Final.pdf' %}"
+                       class="btn btn-warning btn-lg me-3"
+                       target="_blank">
+
+                       Download Resume
+                    </a>
+
+                    <a href="/contact/" class="btn btn-outline-light btn-lg">
+                        Hire Me
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-5 text-center mt-5 mt-lg-0">
+
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                     class="img-fluid"
+                     width="320">
+
+            </div>
+
+        </div>
+
     </div>
+
+</section>
+
+<!-- ABOUT SECTION -->
+
+<div class="container py-5">
+
+    <div class="row">
+
+        <div class="col-md-4 mb-4">
+
+            <div class="card p-4 h-100 shadow-sm">
+
+                <h3>💻 Development</h3>
+
+                <p class="mt-3">
+                    Building scalable Django web applications with REST APIs,
+                    authentication systems, CRUD operations, and responsive UI.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mb-4">
+
+            <div class="card p-4 h-100 shadow-sm">
+
+                <h3>🚀 DevOps</h3>
+
+                <p class="mt-3">
+                    Working with Docker, GitHub Actions, CI/CD pipelines,
+                    deployment automation, and cloud platforms.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mb-4">
+
+            <div class="card p-4 h-100 shadow-sm">
+
+                <h3>🧪 Testing</h3>
+
+                <p class="mt-3">
+                    Experience in STLC, regression testing, test cases,
+                    defect tracking, and software quality practices.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
 
-<hr class="my-5">
+<!-- TECH STACK -->
 
-<div class="row text-center">
-    <div class="col-md-4">
-        <h3>🚀 DevOps</h3>
-        <p>Docker, CI/CD, Cloud Deployment</p>
-    </div>
-   <div class="col-md-4">
-        <h3> Web Technology</h3>
-        <p>HTML, CSS, JS</p>
-    </div>
-    <div class="col-md-4">
-        <h3>💻 Backend</h3>
-        <p>Python, Django, CRUD, MVC, JWT, REST APIs</p>
-    </div>
-   <div class="col-md-4">
-        <h3>💻 Database</h3>
-        <p>SQL, Mysql, query optimization, indexing</p>
-    </div> 
-   <div class="col-md-4">
-        <h3>Testing</h3>
-        <p>Unit Test, Test CaseDesign, code review, Debugging </p>
+<div class="container pb-5">
+
+    <h2 class="section-title">
+        Technical Skills
+    </h2>
+
+    <div class="text-center">
+
+        <span class="skill-badge">Python</span>
+        <span class="skill-badge">Django</span>
+        <span class="skill-badge">REST APIs</span>
+        <span class="skill-badge">Docker</span>
+        <span class="skill-badge">CI/CD</span>
+        <span class="skill-badge">GitHub Actions</span>
+        <span class="skill-badge">Git</span>
+        <span class="skill-badge">AWS</span>
+        <span class="skill-badge">Bootstrap</span>
+        <span class="skill-badge">HTML/CSS</span>
+        <span class="skill-badge">JavaScript</span>
+        <span class="skill-badge">SQL</span>
+        <span class="skill-badge">Software Testing</span>
+
     </div>
 
-    <div class="col-md-4">
-        <h3>☁️ Cloud</h3>
-        <p>AWS, Linux</p>
-    </div>
-    <div class="col-md-4">
-        <h3>☁️Tools</h3>
-        <p>Git, Github, Postman, vscode, Agile/scrum, oop, System Design, Power Bi</p>
-    </div>
 </div>
+
+<!-- ACHIEVEMENTS -->
+
+<div class="container pb-5">
+
+    <h2 class="section-title">
+        Achievements
+    </h2>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-4">
+
+            <div class="card p-4 text-center shadow-sm h-100">
+
+                <h1>🏆</h1>
+
+                <h5 class="mt-3">
+                    Web Design Winner
+                </h5>
+
+                <p>
+                    1st Prize in Dayananda College Intercollege Web Design Fest.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mb-4">
+
+            <div class="card p-4 text-center shadow-sm h-100">
+
+                <h1>🥇</h1>
+
+                <h5 class="mt-3">
+                    Technical Treasure Hunt
+                </h5>
+
+                <p>
+                    1st Prize winner in CIMS Technical Treasure Hunt competition.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mb-4">
+
+            <div class="card p-4 text-center shadow-sm h-100">
+
+                <h1>📄</h1>
+
+                <h5 class="mt-3">
+                    Research Publication
+                </h5>
+
+                <p>
+                    Presented research paper at National Level Conference.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
 {% endblock %}
